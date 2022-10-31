@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 2: Viết hàm insertNumberToArray() nhận vào một mảng các số nguyên, một số nguyên x, và một số nguyên vị trí index.
+    // Hàm trả về mảng ban đầu nếu vị trí index có giá trị nhỏ hơn 0 hoặc lớn hơn chiều dài mảng. Nếu không thì trả về mảng mới đã được
+    // thêm số x vào vị trí index.
+
+
+    function insertNumberToArray(arr, x, index) {
+
+        if (index < 0 || index > arr.length) {
+            return arr;
+        } else {
+            let newArr = []
+            for (let i = 0; i < arr.length; i++) {
+                newArr.push(arr[i])
+                if (i === (index - 1)) {
+                    newArr.push(x)
+                }
+            }
+            return newArr
+        }
+    }
+
+    document.write(insertNumberToArray([1, 2, 3, 4, 5, 6], 7, 3))
+</script>
+</body>
+</html>

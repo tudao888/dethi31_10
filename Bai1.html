@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 1: Cho danh sách các điểm thi ở trong một mảng. Hãy viết hàm findAvg() với đầu vào là một mảng điểm và đầu ra là điểm trung-->
+<!--bình của danh sách điểm thi.-->
+<script>
+    function findAvg(arr) {
+        let sum = 0;
+        for (let i of arr) {
+            sum += i;
+        }
+        return sum / arr.length
+    }
+
+    let avg = findAvg([5, 10, 8, 9, 7]);
+    document.write("Diem trung binh cua mang là: " + avg)
+
+
+</script>
+</body>
+</html>

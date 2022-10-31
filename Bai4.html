@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" style="border: 1px solid" width="500px" height="500px"></canvas>
+<script>
+    // Bài 4: Hãy viết một chương trình để biểu diễn hình chữ nhật, với mô tả
+    // của lớp như sau:
+
+
+    class Rectangle {
+        constructor(x, y, width, height, color) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.color = color;
+        }
+
+        getRender() {
+            let ctx = document.getElementById("myCanvas").getContext('2d');
+            ctx.fillStyle = this.color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+    }
+
+    let rectangle = new Rectangle(100, 100, 200, 150, "red");
+    rectangle.getRender();
+</script>
+
+</body>
+</html>
